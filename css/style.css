@@ -70,3 +70,90 @@ figcaption {
 #details a:active {
   color: red;
 }
+
+/*////////// LAYOUT //////////*/
+ 
+.wrapper {
+  width: 960px;
+  margin: 0 auto; /* 1st value top and bottom, next is left and right --- auto means fill space */
+}
+
+.col-1 { /* span across a third */
+  float: left;
+  width: 32%; /* space for two markins at 2% each */
+  background: #ccc;
+}
+ 
+.col-2 { /* span across two thirds */
+  float: left;
+  width: 66%; /* only 1 margin of 2pct */
+  background: #ccc;
+}
+ 
+.col-3 { /* span across all of the space */
+ background: #ccc;
+}
+
+[class*="col-"] { /* Any class that has the value col- anywhere inside of it */
+  margin-left: 2%;
+}
+ 
+.first {
+  margin-left: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/*////////// MEDIA //////////*/
+ 
+img, video, audio {
+  max-width: 100%; /* this will allow the items to be fluid within their parent container */
+}
+
+/*////////// SECTIONS //////////*/
+ 
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*////////// LAYOUT //////////*/
+ 
+* { /* this means any class at all */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#social { /* will fix the social div to the right of the screen */
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+ 
+#social  a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
+}
+
+/*////////// SECTIONS //////////*/
+ 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
